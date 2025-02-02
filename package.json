@@ -14,12 +14,14 @@
     "@vercel/speed-insights": "^1.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "ru-react-dropdown-component": "^2.2.2"
+    "react-syntax-highlighter": "^15.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@types/lodash": "^4.17.15",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.17.0",
     "eslint-plugin-react-hooks": "^5.0.0",
