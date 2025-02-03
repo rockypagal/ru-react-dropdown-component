@@ -6,4 +6,23 @@ export const sidebarData: { [key: string]: React.ReactNode } = {
   example: <Example />,
 };
 
-export const sidebarButtons: string[] = ["installation", "example"];
+export const sidebarButtons: string[] = [
+  "installation",
+  "example",
+  "options",
+  "onSelect",
+  "size",
+  "title",
+  "animateTitle",
+  "styles",
+  "beforeSelect",
+  "afterSelect",
+  "incomingValue",
+  "changeObserver",
+  "placeholder",
+  "showSearch",
+  "disabled",
+  "resetButton",
+  "customArrow",
+  "hideScrollbar",
+];
