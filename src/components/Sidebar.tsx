@@ -1,4 +1,4 @@
-import React, { Dispatch, ReactNode, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { sidebarButtons } from "../utils/sidebarData";
 interface sidebarPro {
   setCurrentHero: Dispatch<SetStateAction<string>>;
