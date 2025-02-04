@@ -7,7 +7,11 @@ interface codeboxProp {
 
 const Codebox = ({ children }: codeboxProp) => {
   return (
-    <SyntaxHighlighter language="javascript" style={tomorrow}>
+    <SyntaxHighlighter
+      language="javascript"
+      style={tomorrow}
+      customStyle={{ borderRadius: "10px" }} //*********
+    >
       {children}
     </SyntaxHighlighter>
   );
