@@ -52,7 +52,7 @@ button:active {
   /* padding: 0 40px; */
   margin: 0 auto;
   padding: 2rem;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   position: relative;
 }
 
