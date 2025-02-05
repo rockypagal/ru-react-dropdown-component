@@ -29,7 +29,7 @@ const Sidebar = ({ setCurrentHero, currentHero }: sidebarPro) => {
         {sidebarButtons?.map((name: string, index: number) => {
           return (
             <div key={index} className="links-container">
-              {name === "options" && <h4>Props</h4>}
+              {name === "options" && <h4>Props Guides</h4>}
               <li
                 style={
                   index < 2 ? { fontWeight: "bold", fontSize: "1.1rem" } : {}

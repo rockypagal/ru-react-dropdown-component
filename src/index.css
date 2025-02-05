@@ -162,12 +162,14 @@ svg.logo-svg {
   width: 45px;
   height: 50px;
   fill: var(--primary-color);
+  rotate: 180deg;
 }
 
 h4 {
-  color: var(--primary-text);
+  color: var(--primary-color);
   margin: 0.5rem 0;
-  font-weight: 400;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 /*end here*/
@@ -202,12 +204,15 @@ h4 {
   top: 50%;
   right: 0%;
   transform: translate(-50%, -50%);
-  padding: 0.4rem 0.35rem;
+  padding: 0.4rem 0.45rem;
   background-color: var(--primary-bg);
   cursor: pointer;
   opacity: 0;
   transition: 0.2s;
   line-height: 0;
+}
+.copy-main .copy-button.top-right {
+  top: 12%
 }
 
 .copy-main:hover .copy-button {

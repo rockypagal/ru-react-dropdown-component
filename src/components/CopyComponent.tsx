@@ -4,9 +4,10 @@ import { useAnimationClass } from "../utils/customHooks";
 interface copyProp {
   children: React.ReactNode;
   textToCopy: string;
+  styleClass?: string;
 }
 
-const CopyComponent = ({ children, textToCopy }: copyProp) => {
+const CopyComponent = ({ children, textToCopy, styleClass = "" }: copyProp) => {
   const [className, setClassName] = useAnimationClass(700);
 
   const clickToCopy = () => {
@@ -24,7 +25,10 @@ const CopyComponent = ({ children, textToCopy }: copyProp) => {
   return (
     <div className="copy-main">
       {children}
-      <button className={`copy-button ${className}`} onClick={clickToCopy}>
+      <button
+        className={`copy-button ${className} ${styleClass}`}
+        onClick={clickToCopy}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="18px"
