@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 function ExampleFive({ options }: { options: optionsType[] }) {
   const [incomingValue, setIncomingValue] = useState<string | boolean>("");
   const [value, setValue] = useState<string>("");
+  value;
   const [count, setCount] = useState<number>(0);
   const timerRef = useRef<number | null>(null);
   const makeApiCall = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import DropDownBox from "ru-react-dropdown-component";
 import Codebox from "../Codebox";
 import CopyComponent from "../CopyComponent";

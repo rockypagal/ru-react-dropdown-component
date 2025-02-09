@@ -1,4 +1,3 @@
-import React from "react";
 import DropDownBox from "ru-react-dropdown-component";
 import Codebox from "../Codebox";
 import CopyComponent from "../CopyComponent";
@@ -23,7 +22,7 @@ function ExampleFour({ options }: { options: optionsType[] }) {
         <DropDownBox
           options={options}
           placeholder="Select option"
-          beforeSelect={(value, context) => {
+          beforeSelect={(value: string, context: { oldValue: string }) => {
             if (value === context.oldValue) {
               return false;
             }
