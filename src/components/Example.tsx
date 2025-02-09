@@ -1,20 +1,26 @@
-import DropDownBox from "ru-react-dropdown-component";
 import Codebox from "./Codebox";
 import CopyComponent from "./CopyComponent";
+import ExampleOne from "./examples/Example1";
+import ExampleTwo from "./examples/Example2";
+import ExampleThree from "./examples/Example3";
+import ExampleFour from "./examples/Example4";
+import ExampleFive from "./examples/Example5";
+import ExampleSix from "./examples/Example6";
+
+export interface optionsType {
+  label: string;
+  value: string;
+}
 
 const Example = () => {
-  const example1 = `<DropDownBox
-   options={[
-     { label: "Option 1", value: "Option-1" },
-     { label: "Option 2", value: "Option-2" },
-     { label: "Option 3", value: "Option-3" },
-    ]}
-    styles={{ selectStyles: { backgroundColor: "white" } }}
-   />
-  `;
-
+  const cssImport = `import "ru-react-dropdown-component/dist/styles.css";`;
+  const options: optionsType[] = [
+    { label: "Option 1", value: "Option-1" },
+    { label: "Option 2", value: "Option-2" },
+    { label: "Option 3", value: "Option-3" },
+  ];
   return (
-    <div>
+    <div className="pb-8 mb-6">
       <h1 className="main-heading">Examples</h1>
       <h2 className="sub-heading m-0">Examples with Props and Explanations</h2>
       <p className="m-0 mt-2">
@@ -23,19 +29,32 @@ const Example = () => {
         an explanation of the props used and their effects, helping you
         integrate the dropdown seamlessly into your React application.
       </p>
-      <h2 className="mt-8">Example 1</h2>
-      <p className="text">Simple usage of the component</p>
-      <CopyComponent textToCopy={example1} styleClass="top-right">
-        <Codebox>{example1}</Codebox>
+      <h2 className="mt-8">CSS Import</h2>
+      <p className="text">
+        Importing CSS is optional. However, if you notice a slight delay in
+        styles being applied, consider importing it for better performance.
+      </p>
+      <CopyComponent textToCopy={cssImport}>
+        <Codebox>{cssImport}</Codebox>
       </CopyComponent>
-      <DropDownBox
-        options={[
-          { label: "Option 1", value: "Option-1" },
-          { label: "Option 2", value: "Option-2" },
-          { label: "Option 3", value: "Option-3" },
-        ]}
-        styles={{ selectStyles: { backgroundColor: "white" } }}
-      />
+
+      {/* Example 1 */}
+      <ExampleOne options={options} />
+
+      {/* Example 2 */}
+      <ExampleTwo options={options} />
+
+      {/* Example 3 */}
+      <ExampleThree options={options} />
+
+      {/* Example 4 */}
+      <ExampleFour options={options} />
+
+      {/* Example 5 */}
+      <ExampleFive options={options} />
+
+      {/* Example 6 */}
+      <ExampleSix />
     </div>
   );
 };

@@ -10,6 +10,7 @@
   --secondary-text: #b0b3b8;
   --success-secondary: #057a55c0;
   --card: #242526;
+  --card-2: #343435;
   --primary-text: white;
   --font-size: 16px;
   --padding: 10px;
@@ -93,7 +94,7 @@ button:active {
   position: sticky;
   width: 25%;
   height: calc(100vh - 4rem);
-  /* top: 1rem; */
+  top: 2rem;
   overflow-y: auto;
   padding: 0 1.5rem 0 0;
 }
@@ -162,7 +163,7 @@ svg.logo-svg {
   width: 45px;
   height: 50px;
   fill: var(--primary-color);
-  rotate: 180deg;
+  /* rotate: 180deg; */
 }
 
 h4 {
@@ -170,6 +171,25 @@ h4 {
   margin: 0.5rem 0;
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+.drop-down-main .drop-down-selector .direct {
+  background-color: white;
+}
+.drop-down-main .drop-down-item {
+  color: black;
+  font-weight: 500;
+}
+
+.heigh-light {
+  text-decoration: underline;
+  padding: 0.2rem 0.3rem;
+  background-color: var(--card-2);
+  border-radius: 3px;
+}
+
+.example-option:hover {
+  background-color: rgb(56, 128, 255, 21%) !important;
 }
 
 /*end here*/
@@ -212,7 +232,7 @@ h4 {
   line-height: 0;
 }
 .copy-main .copy-button.top-right {
-  top: 12%
+  top: 2rem;
 }
 
 .copy-main:hover .copy-button {

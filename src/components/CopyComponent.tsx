@@ -16,7 +16,6 @@ const CopyComponent = ({ children, textToCopy, styleClass = "" }: copyProp) => {
     });
     navigator.clipboard
       .write([clipboardItem])
-      .then(() => console.log("Copied to clipboard! ✅"))
       .catch((err) => console.error("Failed to copy:", err));
 
     setClassName("showCopy");
@@ -28,6 +27,7 @@ const CopyComponent = ({ children, textToCopy, styleClass = "" }: copyProp) => {
       <button
         className={`copy-button ${className} ${styleClass}`}
         onClick={clickToCopy}
+        title="Click to copy"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,7 @@ import CopyComponent from "./CopyComponent";
 const Installation = () => {
   const installCommand: string = "npm install ru-react-dropdown-component";
   const installCommandNext: string =
-    "npm install ru-react-dropdown-component --force"; //*********
+    "yarn add ru-react-dropdown-component"; //*********
   return (
     <div>
       <h1 className="main-heading">Introduction</h1>
@@ -20,8 +20,10 @@ const Installation = () => {
       <CopyComponent textToCopy={installCommand}>
         <Codebox>{installCommand}</Codebox>
       </CopyComponent>
-      <h2 className="mt-8 pt-2">Installation for Next js and react 19</h2>
-      <p className="text">To install, run the following command in terminal:</p>
+      <h2 className="mt-8 pt-2">Installation with yarn</h2>
+      <p className="text">
+        To install with yarn, run the following command in terminal:
+      </p>
       <CopyComponent textToCopy={installCommandNext}>
         <Codebox>{installCommandNext}</Codebox>
       </CopyComponent>

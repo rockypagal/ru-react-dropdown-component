@@ -28,6 +28,43 @@
 /* utilities */
 /*********/
 
+/* GAP */
+
+.container .gap-0 {
+  gap: 0rem;
+}
+
+.container .gap-1 {
+  gap: 0.25rem;
+}
+
+.container .gap-2 {
+  gap: 0.5rem;
+}
+
+.container .gap-3 {
+  gap: 0.75rem;
+}
+
+.container .gap-4 {
+  gap: 1rem;
+}
+
+.container .gap-5 {
+  gap: 1.25rem;
+}
+
+.container .gap-6 {
+  gap: 1.5rem;
+}
+
+.container .gap-7 {
+  gap: 1.75rem;
+}
+
+.container .gap-8 {
+  gap: 2rem;
+}
 /* Margin */
 
 .container .m-0 {
