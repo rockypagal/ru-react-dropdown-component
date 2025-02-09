@@ -8,6 +8,7 @@ import { useState } from "react";
 function ExampleSix() {
   const [country, setCountry] = useState<string>("");
   const [capital, setCapital] = useState<string>("");
+  capital
   const countries: { label: string; value: string }[] = [
     { label: "America", value: "america" },
     { label: "Japan", value: "japan" },
