@@ -8,8 +8,6 @@ import { useEffect, useRef, useState } from "react";
 
 function ExampleFive({ options }: { options: optionsType[] }) {
   const [incomingValue, setIncomingValue] = useState<string | boolean>("");
-  const [value, setValue] = useState<string>("");
-  value;
   const [count, setCount] = useState<number>(0);
   const timerRef = useRef<number | null>(null);
   const makeApiCall = () => {
@@ -19,7 +17,7 @@ function ExampleFive({ options }: { options: optionsType[] }) {
     setCount(3);
     setIncomingValue("");
     timerRef.current = setTimeout(() => {
-      setIncomingValue("Option-3");
+      setIncomingValue("Option_3");
     }, 3000);
   };
 
@@ -37,7 +35,7 @@ function ExampleFive({ options }: { options: optionsType[] }) {
     <div className="pt-8">
       <h2 className="mt-8">Example 5</h2>
       <p className="text">
-        This example demonstrates how the <HighLight>incomingValue</HighLight>{" "}
+        This example demonstrates how the <HighLight to>incomingValue</HighLight>{" "}
         prop allows dynamic updates by setting a value received from an API on
         the initial render. When the component mounts, the API response triggers
         an update, ensuring the dropdown starts with a pre-filled value.
@@ -53,9 +51,7 @@ function ExampleFive({ options }: { options: optionsType[] }) {
           options={options}
           // placeholder="Select option"
           incomingValue={incomingValue}
-          onSelect={(value: string) => {
-            setValue(value);
-          }}
+          onSelect={() => {}}
           resetButton="Clear Value"
           changeObserver={{
             target: incomingValue,

@@ -15,9 +15,9 @@ export interface optionsType {
 const Example = () => {
   const cssImport = `import "ru-react-dropdown-component/dist/styles.css";`;
   const options: optionsType[] = [
-    { label: "Option 1", value: "Option-1" },
-    { label: "Option 2", value: "Option-2" },
-    { label: "Option 3", value: "Option-3" },
+    { label: "Option 1", value: "Option_1" },
+    { label: "Option 2", value: "Option_2" },
+    { label: "Option 3", value: "Option_3" },
   ];
   return (
     <div className="pb-8 mb-6">

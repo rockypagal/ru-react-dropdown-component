@@ -52,7 +52,7 @@ button:active {
   max-width: 1200px;
   /* padding: 0 40px; */
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   /* border: 1px solid green; */
   position: relative;
 }
@@ -87,6 +87,7 @@ button:active {
   /* border: 1px solid pink; */
   /* height: 200vh; */
   padding: 1rem 2.5rem;
+  box-sizing: border-box;
 }
 /* start */
 
@@ -94,9 +95,11 @@ button:active {
   position: sticky;
   width: 25%;
   height: calc(100vh - 4rem);
-  top: 2rem;
+  top: 4.125rem;
   overflow-y: auto;
   padding: 0 1.5rem 0 0;
+  box-sizing: border-box;
+  z-index: 25;
 }
 
 /* width */
@@ -125,6 +128,26 @@ button:active {
   background: var(--dark-primary-hover-color);
 }
 
+/* Navbar start*/
+
+.container .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0rem;
+  position: sticky;
+  top: 0px;
+  background: var(--primary-bg);
+  z-index: 30;
+}
+
+.navbar .socials-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Navbar end*/
+
 .sidebar ul {
   display: flex;
   flex-direction: column;
@@ -146,19 +169,28 @@ button:active {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   text-transform: capitalize;
+  color: var(--primary-text);
+}
+.sidebar .nav-links:hover:not(.selected-nav) {
+  background-color: var(--card-2);
 }
 
 .selected-nav {
   background-color: var(--primary-color);
 }
 
+.container .footer {
+  padding: 1rem;
+  text-align: center;
+}
+
 .logo {
   margin-left: 1rem;
   color: var(--primary-color);
 }
-.container .logo-container {
+/* .container .logo-container {
   margin-bottom: 1rem;
-}
+} */
 svg.logo-svg {
   width: 45px;
   height: 50px;
@@ -181,11 +213,17 @@ h4 {
   font-weight: 500;
 }
 
-.heigh-light {
-  text-decoration: underline;
+.high-light {
   padding: 0.2rem 0.3rem;
   background-color: var(--card-2);
   border-radius: 3px;
+  color: var(--primary-text);
+  text-decoration: none;
+}
+
+.high-light.link {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .example-option:hover {
@@ -199,6 +237,7 @@ h4 {
 .container .main-heading {
   margin: 1.5rem 0;
   margin-top: 0.7rem;
+  font-size: 2.188rem;
 }
 
 .container .sub-heading {
@@ -272,7 +311,7 @@ h4 {
     padding: 0 20px;
   }
 
-  .container .sidebar {
+  /* .container .sidebar {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -280,7 +319,34 @@ h4 {
     width: calc(100vw - 2rem);
     background-color: rgb(0, 9, 139);
     padding: 1rem;
-    /* --darkreader-inline-bgcolor: #52297a; */
+  } */
+
+  .container .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-bg);
+    padding: 1rem;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    display: none;
+  }
+
+  .container .sidebar.showSidebar {
+    display: block;
+  }
+
+  .container .navbar {
+    z-index: 24;
+  }
+  .sidebar ul {
+    padding-bottom: 1rem;
+  }
+  .container .hero {
+    width: 100%;
+    padding: 1rem;
   }
 }
 

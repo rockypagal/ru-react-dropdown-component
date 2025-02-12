@@ -3,8 +3,7 @@ import CopyComponent from "./CopyComponent";
 
 const Installation = () => {
   const installCommand: string = "npm install ru-react-dropdown-component";
-  const installCommandNext: string =
-    "yarn add ru-react-dropdown-component"; //*********
+  const installCommandNext: string = "yarn add ru-react-dropdown-component"; //*********
   return (
     <div>
       <h1 className="main-heading">Introduction</h1>

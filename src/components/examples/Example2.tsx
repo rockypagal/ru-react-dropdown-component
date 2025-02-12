@@ -10,8 +10,9 @@ function ExampleTwo({ options }: { options: optionsType[] }) {
       <h2 className="mt-8">Example 2</h2>
       <p className="text">
         This example demonstrates the usage of the{" "}
-        <HighLight>showSearch</HighLight>, <HighLight>resetButton</HighLight>,{" "}
-        and <HighLight>title</HighLight> props for enhanced user experience and
+        <HighLight to>showSearch</HighLight>,{" "}
+        <HighLight to>resetButton</HighLight>, and{" "}
+        <HighLight to>title</HighLight> props for enhanced user experience and
         functionality
       </p>
       <CopyComponent textToCopy={examplesText?.example2} styleClass="top-right">

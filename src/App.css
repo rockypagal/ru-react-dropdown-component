@@ -26,8 +26,12 @@
   color: #888;
 }
 /* utilities */
-/*********/
 
+/* line hight */
+
+.container .line-0 {
+  line-height: 0rem;
+}
 /* GAP */
 
 .container .gap-0 {
@@ -66,6 +70,10 @@
   gap: 2rem;
 }
 /* Margin */
+
+.container .m-0-imp {
+  margin: 0rem !important;
+}
 
 .container .m-0 {
   margin: 0rem;
@@ -268,6 +276,10 @@
 }
 
 /* Padding */
+
+.container .p-0-imp {
+  padding: 0rem !important;
+}
 
 .container .p-0 {
   padding: 0rem;

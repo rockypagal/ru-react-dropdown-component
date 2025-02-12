@@ -7,8 +7,6 @@ import { useState } from "react";
 
 function ExampleSix() {
   const [country, setCountry] = useState<string>("");
-  const [capital, setCapital] = useState<string>("");
-  capital
   const countries: { label: string; value: string }[] = [
     { label: "America", value: "america" },
     { label: "Japan", value: "japan" },
@@ -43,7 +41,7 @@ function ExampleSix() {
         <Codebox>{examplesText?.example6Options}</Codebox>
       </CopyComponent>
       <p className="text mt-6">
-        This example demonstrates how the <HighLight>changeObserver</HighLight>{" "}
+        This example demonstrates how the <HighLight to>changeObserver</HighLight>{" "}
         prop tracks changes in an external value and allows you to update the
         dropdown state manually.
       </p>
@@ -73,9 +71,7 @@ function ExampleSix() {
           options={capitals}
           title="Select Capital"
           resetButton="Clear capital"
-          onSelect={(value: string) => {
-            setCapital(value);
-          }}
+          onSelect={() => {}}
           changeObserver={{
             target: country,
             handler: (

@@ -12,9 +12,9 @@ interface exampleObj {
 export const examplesText: exampleObj = {
   example1: `<DropDownBox
    options={[
-     { label: "Option 1", value: "Option-1" },
-     { label: "Option 2", value: "Option-2" },
-     { label: "Option 3", value: "Option-3" },
+     { label: "Option 1", value: "Option_1" },
+     { label: "Option 2", value: "Option_2" },
+     { label: "Option 3", value: "Option_3" },
     ]}
     placeholder="Select option"
     onSelect={(value) => setValue(value)}
@@ -22,9 +22,9 @@ export const examplesText: exampleObj = {
   `,
   example2: `<DropDownBox
   options={[
-   { label: "Option 1", value: "Option-1" },
-   { label: "Option 2", value: "Option-2" },
-   { label: "Option 3", value: "Option-3" },
+   { label: "Option 1", value: "Option_1" },
+   { label: "Option 2", value: "Option_2" },
+   { label: "Option 3", value: "Option_3" },
   ]}
   onSelect={(value) => setValue(value)}
   showSearch={true}
@@ -35,9 +35,9 @@ export const examplesText: exampleObj = {
   `,
   example3: `<DropDownBox
    options={[
-    { label: "Option 1", value: "Option-1" },
-    { label: "Option 2", value: "Option-2" },
-    { label: "Option 3", value: "Option-3" },
+    { label: "Option 1", value: "Option_1" },
+    { label: "Option 2", value: "Option_2" },
+    { label: "Option 3", value: "Option_3" },
     ]}
     showSearch={true}
     resetButton={true}
@@ -71,9 +71,9 @@ export const examplesText: exampleObj = {
 }`,
   example4: `<DropDownBox
    options={[
-     { label: "Option 1", value: "Option-1" },
-     { label: "Option 2", value: "Option-2" },
-     { label: "Option 3", value: "Option-3" },
+     { label: "Option 1", value: "Option_1" },
+     { label: "Option 2", value: "Option_2" },
+     { label: "Option 3", value: "Option_3" },
     ]}
     placeholder="Select option"
 
@@ -96,15 +96,15 @@ export const examplesText: exampleObj = {
   `,
   example5: `<DropDownBox
    options={[
-     { label: "Option 1", value: "Option-1" },
-     { label: "Option 2", value: "Option-2" },
-     { label: "Option 3", value: "Option-3" },
+     { label: "Option 1", value: "Option_1" },
+     { label: "Option 2", value: "Option_2" },
+     { label: "Option 3", value: "Option_3" },
     ]}
    onSelect={(value) => {
     setValue(value);
    }}
    resetButton="Clear Value"
-   incomingValue={response} // Option-3
+   incomingValue={response} // Option_3
 />
   `,
   example6Options: `const countriesOptions = [
@@ -158,4 +158,30 @@ export const examplesText: exampleObj = {
   }}
 />
   `,
+};
+
+// * Options
+
+interface optionsObj {
+  example1: string;
+  example2: string;
+}
+
+export const optionsText: optionsObj = {
+  example1: `<DropDownBox
+  options={[
+  { label: "Option 1", value: "Option_1" },
+  { label: "Option 2", value: "Option_2" },
+  { label: "Option 3", value: "Option_3" },
+  ]}
+  onSelect={(value) => setValue(value)}
+/>`,
+  example2: `<DropDownBox
+  options={[
+  { label: "Option 1", value: "Option_1" },
+  { label: "Option 2", value: "Option_2" },
+  { label: "Option 3", value: "Option_3" },
+  ]}
+  onSelect={(value) => setValue(value)}
+/>`,
 };

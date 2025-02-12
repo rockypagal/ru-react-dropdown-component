@@ -22,10 +22,10 @@ function ExampleThree({ options }: { options: optionsType[] }) {
       {/* dropdown code box */}
 
       <p className="text mt-6">
-        This example demonstrates the usage of the <HighLight>styles</HighLight>{" "}
-        prop for styling the
+        This example demonstrates the usage of the{" "}
+        <HighLight to>styles</HighLight> prop for styling the{" "}
         <HighLight>DropDownBox</HighLight>, and the{" "}
-        <HighLight>animateTitle</HighLight> prop for animating the title on
+        <HighLight to>animateTitle</HighLight> prop for animating the title on
         focus.
       </p>
       <CopyComponent textToCopy={examplesText?.example3} styleClass="top-right">
@@ -64,7 +64,6 @@ function ExampleThree({ options }: { options: optionsType[] }) {
           }}
         />
       </div>
-
     </div>
   );
 }

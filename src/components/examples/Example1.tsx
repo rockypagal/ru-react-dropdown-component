@@ -11,8 +11,9 @@ function ExampleOne({ options }: { options: optionsType[] }) {
       <p className="text">
         This example showcases the most basic usage of the{" "}
         <HighLight>DropDownBox</HighLight> component with{" "}
-        <HighLight>options</HighLight>, <HighLight>onSelect</HighLight>, and{" "}
-        <HighLight>placeholder</HighLight> props.
+        <HighLight to>options</HighLight>,{" "}
+        <HighLight to>onSelect</HighLight>, and <HighLight to>placeholder</HighLight>{" "}
+        props.
       </p>
       <CopyComponent textToCopy={examplesText?.example1} styleClass="top-right">
         <Codebox>{examplesText?.example1}</Codebox>

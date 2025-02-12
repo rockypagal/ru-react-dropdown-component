@@ -11,8 +11,9 @@ function ExampleFour({ options }: { options: optionsType[] }) {
       <h2 className="mt-8">Example 4</h2>
       <p className="text">
         This example showcases the functionality of the{" "}
-        <HighLight>beforeSelect</HighLight>, <HighLight>onSelect</HighLight>,
-        and <HighLight>afterSelect</HighLight> props, highlighting their role in
+        <HighLight to>beforeSelect</HighLight>,{" "}
+        <HighLight to>onSelect</HighLight>, and{" "}
+        <HighLight to>afterSelect</HighLight> props, highlighting their role in
         handling selection events.
       </p>
       <CopyComponent textToCopy={examplesText?.example4} styleClass="top-right">
