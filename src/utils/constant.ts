@@ -178,10 +178,212 @@ export const optionsText: optionsObj = {
 />`,
   example2: `<DropDownBox
   options={[
-  { label: "Option 1", value: "Option_1" },
-  { label: "Option 2", value: "Option_2" },
-  { label: "Option 3", value: "Option_3" },
-  ]}
+  {
+    label: "User 1",
+    value: "userId_1",
+    searchOptions: ["abc@xyz.com", "accountant", "123-456-7890"],
+  },
+  {
+    label: "User 2",
+    value: "userId_2",
+    searchOptions: ["jkl@pqr.com", "manager", "0243-156-9890"],
+  },
+  {
+    label: "User 3",
+    value: "userId_3",
+    searchOptions: ["rst@uvw.com", "teacher", "321-654-0987"],
+  },
+]}
   onSelect={(value) => setValue(value)}
+/>`,
+};
+
+// * BeforeSelect
+
+interface beforeSelectObj {
+  example1: string;
+  example2: string;
+}
+
+export const beforeSelectText: beforeSelectObj = {
+  example1: `<DropDownBox
+  options={[
+  { label: "Admin", value: "admin" },
+  { label: "User", value: "user" },
+  { label: "Guest", value: "guest" },
+]}
+  placeholder="Select Role"
+  beforeSelect={(value, metadata) => {
+  // Prevent selection if "guest" is chosen
+  if (value === "guest") {
+    alert("Guest selection is restricted!");
+    return false; // Blocks the selection
+  }
+}}
+/>`,
+  example2: `<DropDownBox
+  options={[
+    { label: "Admin", value: "admin" },
+    { label: "User", value: "user" },
+    { label: "Guest", value: "guest" },
+  ]}
+  placeholder="Select Role"
+  beforeSelect=(value, context) => {
+    const { oldValue, index, row } = context;
+    
+    // Prevent selection if the same option is selected again
+    if (value === oldValue) {
+      alert(\`You already selected "\${row.label}". Choose a different option.\`);
+      return false; // Blocks the selection
+      }
+      
+      alert(\`Selected Index: \${index}, Label: \${row.label}\`);
+      };
+      />`,
+};
+
+// * ONSelect
+interface onSelectObj {
+  example1: string;
+}
+
+export const onSelectText: onSelectObj = {
+  example1: `<DropDownBox
+  options={[
+  { label: "Option 1", value: "option_1" },
+  { label: "Option 2", value: "option_2" },
+  { label: "Option 3", value: "option_3" },
+]}
+  placeholder="Select Role"
+  onSelect={(value, metadata) => {
+  setValue(value)// To set the selected value to state
+  }
+}
+/>`,
+};
+// * AfterSelect
+interface afterSelectObj {
+  example1: string;
+}
+
+export const afterSelectText: afterSelectObj = {
+  example1: `<DropDownBox
+  options={[
+    { label: "Admin", value: "admin" },
+    { label: "User", value: "user" },
+    { label: "Guest", value: "guest" },
+]}
+  title="Update Role"
+  
+  afterSelect={async (value,metadata) => {
+    await updateRole(value);// Making API call to update role
+  }}
+  onSelect={(value, metadata) => {
+  setValue(value)// To set the selected value to state
+  }}
+  />`,
+};
+
+// * Size
+
+interface sizeObj {
+  defaultText: string;
+  example1: string;
+  example2: string;
+  example3: string;
+}
+
+export const sizeText: sizeObj = {
+  defaultText: `.size-example-style {
+  width: 250px !important;
+  }
+
+@media (max-width: 768px) {
+  .size-example-style {
+    width: 100% !important;
+  }
+}`,
+
+  example1: `<DropDownBox
+  options={[
+  { label: "Medium", value: "medium" },
+  { label: "Small", value: "small" },
+  { label: "Mini", value: "mini" },
+  ]}
+  size={"_"}
+  placeholder="Select Size"
+  resetButton={true}
+  onSelect={(value) => {
+    setSize(value);
+    }}
+    />`,
+  example2: `<DropDownBox
+  options={[
+    { label: "700px", value: "700px" },
+  { label: "40em", value: "40em" },
+  { label: "35rem", value: "35rem" },
+  { label: "60%", value: "60%" },
+  { label: "20vw", value: "20vw" },
+  { label: "25vmin", value: "25vmin" },
+  { label: "7vmax", value: "7vmax" },
+  ]}
+  size={"_"}// CSSUnit state
+  placeholder="Select CSS Unit"
+  resetButton={true}
+  onSelect={(value) => {
+    setCSSUnit(value);
+    }}
+/>`,
+  example3: `<DropDownBox
+  options={[
+    { label: "Option 1", value: "option_1" },
+    { label: "Option 2", value: "option_2" },
+    { label: "Option 3", value: "option_3" },
+]}
+  size={"size-example-style"}// CSS Class
+  placeholder="CSS Class"
+  onSelect={(value) => {
+    setValue(value);
+  }}
+/>`,
+};
+
+// * Title
+interface titleObj {
+  example1: string;
+}
+
+export const titleText: titleObj = {
+  example1: `<DropDownBox
+  options={[
+    { label: "Admin", value: "admin" },
+    { label: "User", value: "user" },
+    { label: "Guest", value: "guest" },
+  ]}
+    
+  title="Update Role"
+  onSelect={(value, metadata) => {
+  setValue(value)// To set the selected value to state
+  }}
+  />`,
+};
+//* AnimateTitlel
+interface titleObj {
+  example1: string;
+}
+
+export const animateTitleText: titleObj = {
+  example1: `<DropDownBox
+  options={[
+     { label: "Admin", value: "admin" },
+     { label: "User", value: "user" },
+     { label: "Guest", value: "guest" },
+   ]}
+  title="Update Role"
+  resetButton={true}
+  animateTitle={true}// To animate the title
+  onSelect={(value, metadata) => {
+  setValue(value)// To set the selected value to state
+  }}
 />`,
 };

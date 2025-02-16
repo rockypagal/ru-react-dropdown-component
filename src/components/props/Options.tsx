@@ -38,7 +38,14 @@ const Options = () => {
       {/* Examples */}
       <ExampleTemplate
         title="Example 1"
-        subtitle="Basic Example label & value"
+        subtitleElement={{
+          element: (
+            <p className="m-0 mt-4">
+              Basic Example with <HighLight>label</HighLight> &{" "}
+              <HighLight>value</HighLight>
+            </p>
+          ),
+        }}
         exampleText={optionsText?.example1}
         className=" p-0-imp"
       >
@@ -55,17 +62,49 @@ const Options = () => {
       </ExampleTemplate>
       <ExampleTemplate
         title="Example 2"
-        subtitle="Basic Example label & value"
-        exampleText={optionsText?.example1}
+        subtitleElement={{
+          element: (
+            <>
+              <p className="m-0 mt-4">
+                This example demonstrates how the{" "}
+                <HighLight>searchOptions</HighLight> property allows you to add
+                multiple search attributes to each option, enabling more
+                flexible and precise filtering. Instead of relying solely on the
+                primary label, users can search using different criteria for a
+                better experience.
+              </p>
+
+              <p className="m-0 mt-4 mb-4">
+                For example, in the options list below, you can find "User 1" by
+                searching for "accountant," "abc@xyz.com," "123-456-7890," or
+                "User 1" since all these attributes are linked to the same user.
+              </p>
+            </>
+          ),
+        }}
+        exampleText={optionsText?.example2}
       >
         <DropDownBox
           options={[
-            { label: "Option 1", value: "Option_1" },
-            { label: "Option 2", value: "Option_2" },
-            { label: "Option 3", value: "Option_3" },
+            {
+              label: "User 1",
+              value: "userId_1",
+              searchOptions: ["abc@xyz.com", "accountant", "123-456-7890"],
+            },
+            {
+              label: "User 2",
+              value: "userId_2",
+              searchOptions: ["jkl@pqr.com", "manager", "0243-156-9890"],
+            },
+            {
+              label: "User 3",
+              value: "userId_3",
+              searchOptions: ["rst@uvw.com", "teacher", "321-654-0987"],
+            },
           ]}
-          // placeholder="Select option"
+          placeholder="Select User"
           onSelect={(value: string) => setValue(value)}
+          showSearch
         />
       </ExampleTemplate>
     </div>
