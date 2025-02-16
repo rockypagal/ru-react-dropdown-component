@@ -39,7 +39,7 @@ const Navbar = () => {
           </svg>
         </a>
         <a
-          href="www.linkedin.com/in/umang-rathod-6b48ab250"
+          href="https://www.linkedin.com/in/umang-rathod-6b48ab250"
           className="line-0"
           target="_blank"
         >
@@ -85,7 +85,7 @@ const Navbar = () => {
           </svg>
         </a> */}
 
-          {/* <svg
+        {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             shapeRendering="geometricPrecision"
             textRendering="geometricPrecision"
