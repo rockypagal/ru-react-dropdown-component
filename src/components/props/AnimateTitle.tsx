@@ -1,5 +1,5 @@
 import DropDownBox from "ru-react-dropdown-component";
-import { animateTitleText, titleText } from "../../utils/constant";
+import { animateTitleText } from "../../utils/constant";
 import ExampleTemplate from "../ExampleTemplate";
 import HighLight from "../HighLight";
 import Label from "../Label";

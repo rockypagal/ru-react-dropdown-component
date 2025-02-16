@@ -62,7 +62,7 @@ const BeforeSelect = () => {
             { label: "Guest", value: "guest" },
           ]}
           placeholder="Select Role"
-          beforeSelect={(value, metadata) => {
+          beforeSelect={(value) => {
             // Prevent selection if "guest" is chosen
             if (value === "guest") {
               alert("Guest selection is restricted!");
