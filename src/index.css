@@ -46,6 +46,12 @@ button:active {
 button.no-active:active {
   scale: 1;
 }
+p {
+  line-height: 1.8;
+}
+.lh-1 {
+  line-height: 1.8;
+}
 .card {
   background-color: var(--card);
 }
@@ -362,6 +368,20 @@ h4 {
 }
 
 /* copyComponent end */
+/* styles component start */
+.style-option-example1 {
+  transition: 0.2s;
+}
+.style-option-example1:hover {
+  background-color: #eb3d6c91 !important;
+}
+.style-option-example2 {
+  color: white !important;
+}
+.style-option-example2:hover {
+  background-color: rgb(77 80 97) !important;
+}
+/* styles component end */
 
 /* Size Custom css start */
 .size-example-style {

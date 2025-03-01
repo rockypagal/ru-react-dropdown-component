@@ -5,7 +5,11 @@ import HighLight from "../HighLight";
 import { examplesText } from "../../utils/constant";
 import { useState } from "react";
 
-function ExampleSix() {
+interface exampleSix {
+  heading?: string;
+}
+
+function ExampleSix({ heading = "Example 6" }: exampleSix) {
   const [country, setCountry] = useState<string>("");
   const countries: { label: string; value: string }[] = [
     { label: "America", value: "america" },
@@ -32,7 +36,7 @@ function ExampleSix() {
 
   return (
     <div className="pt-8">
-      <h2 className="mt-8">Example 6</h2>
+      <h2 className="mt-8">{heading}</h2>
       <p className="text">Options Arrays for dropdowns</p>
       <CopyComponent
         textToCopy={examplesText?.example6Options}
@@ -41,9 +45,9 @@ function ExampleSix() {
         <Codebox>{examplesText?.example6Options}</Codebox>
       </CopyComponent>
       <p className="text mt-6">
-        This example demonstrates how the <HighLight to>changeObserver</HighLight>{" "}
-        prop tracks changes in an external value and allows you to update the
-        dropdown state manually.
+        This example demonstrates how the{" "}
+        <HighLight to>changeObserver</HighLight> prop tracks changes in an
+        external value and allows you to update the dropdown state manually.
       </p>
       {/* <p>
         It includes a <HighLight>target</HighLight> (the observed value) and a

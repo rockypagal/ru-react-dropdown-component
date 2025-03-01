@@ -9,7 +9,7 @@ interface labelProp {
 
 const Label = ({ label, children, className }: labelProp) => {
   return (
-    <div className={"mt-3 " + (className ? className : "")}>
+    <div className={"mt-3 lh-1 " + (className || "")}>
       <HighLight>{label}</HighLight> : <span className="pl-2">{children}</span>
     </div>
   );

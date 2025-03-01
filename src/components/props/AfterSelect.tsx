@@ -3,6 +3,7 @@ import { afterSelectText } from "../../utils/constant";
 import ExampleTemplate from "../ExampleTemplate";
 import HighLight from "../HighLight";
 import Label from "../Label";
+import List from "../List";
 
 const AfterSelect = () => {
   return (
@@ -22,16 +23,39 @@ const AfterSelect = () => {
         Function
       </Label>{" "}
       <Label label="Arguments">{"Value, Metadata (object)"}</Label>
-      <h2 className="mt-8 mb-5">Explanation</h2>
+      <h2 className="mt-8 mb-5">Properties</h2>
       <Label label="Value">The selected option's value.</Label>
       <Label label="Metadata">
-        This Object provides metadata about the selection. It includes{" "}
-        <HighLight>oldValue</HighLight>, which holds the previously selected
-        value, <HighLight>index</HighLight>, representing the position of the
-        selected option in the options array, and <HighLight>row</HighLight>,
-        which provides the complete option object, including both{" "}
-        <HighLight>label</HighLight> and
-        <HighLight>value</HighLight>.
+        This Object provides metadata about the selection. It includes:{" "}
+        <List>
+          <li>
+            {" "}
+            <Label label="triggeredBy">
+              {" "}
+              The method that triggered the selection
+            </Label>
+          </li>
+          <li>
+            {" "}
+            <Label label="oldValue">
+              {" "}
+              which holds the previously selected value.
+            </Label>
+          </li>
+          <li>
+            <Label label="index">
+              {" "}
+              representing the position of the selected option in the options
+              array.
+            </Label>
+          </li>
+          <li>
+            <Label label="row">
+              which provides the complete option object, including both{" "}
+              <HighLight>label</HighLight> and <HighLight>value</HighLight>.
+            </Label>
+          </li>
+        </List>
       </Label>
       <ExampleTemplate
         title="Example 1"

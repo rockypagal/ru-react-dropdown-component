@@ -38,7 +38,7 @@ const Size = () => {
       <Label label="className">
         Regular string will be applied as a className
       </Label>
-      <h2 className="mt-8 mb-5">Explanation</h2>
+      <h2 className="mt-8 mb-5">Properties</h2>
       <Label label="medium">
         If <HighLight>size="medium"</HighLight>, the dropdown width is set to{" "}
         <HighLight>19rem</HighLight> or <HighLight>304px</HighLight>.
@@ -63,7 +63,6 @@ const Size = () => {
         <HighLight>className</HighLight> for the dropdown. This is useful for
         applying responsive styles via CSS.
       </Label>
-      <p className="text">CSS style for options on hover.</p>
       {/* Empales */}
       <ExampleTemplate
         title="Example 1"

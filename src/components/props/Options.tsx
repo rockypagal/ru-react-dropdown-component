@@ -26,7 +26,7 @@ const Options = () => {
         {"[{ label: string, value: any, searchOptions:[string] }]"}
       </Label>
       {/* Explanations */}
-      <h2 className="mt-8 mb-5">Explanation</h2>
+      <h2 className="mt-8 mb-5">Properties</h2>
       <Label label="label">
         The text displayed in the dropdown for the selected option.
       </Label>

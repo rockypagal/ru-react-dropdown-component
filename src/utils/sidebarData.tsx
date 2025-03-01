@@ -10,6 +10,15 @@ import AfterSelect from "../components/props/AfterSelect";
 import Size from "../components/props/Size";
 import Title from "../components/props/Title";
 import AnimateTitle from "../components/props/AnimateTitle";
+import Styles from "../components/props/Styles";
+import Disabled from "../components/props/Disabled";
+import Placeholder from "../components/props/Placeholder";
+import IncomingValue from "../components/props/IncomingValue";
+import ChangeObserver from "../components/props/ChangeObserver";
+import ResetButton from "../components/props/ResetButton";
+import CustomArrow from "../components/props/CustomArrow";
+import HideScrollbar from "../components/props/HideScrollbar";
+import ShowSearch from "../components/props/ShowSearch";
 
 export const router = createBrowserRouter([
   {
@@ -53,6 +62,43 @@ export const router = createBrowserRouter([
       {
         path: "/animateTitle",
         element: <AnimateTitle />,
+      },
+      {
+        path: "/styles",
+        element: <Styles />,
+      },
+
+      {
+        path: "/incomingValue",
+        element: <IncomingValue />,
+      },
+      {
+        path: "/changeObserver",
+        element: <ChangeObserver />,
+      },
+      {
+        path: "/placeholder",
+        element: <Placeholder />,
+      },
+      {
+        path: "/showSearch",
+        element: <ShowSearch />,
+      },
+      {
+        path: "/disabled",
+        element: <Disabled />,
+      },
+      {
+        path: "/resetButton",
+        element: <ResetButton />,
+      },
+      {
+        path: "/customArrow",
+        element: <CustomArrow />,
+      },
+      {
+        path: "/hideScrollbar",
+        element: <HideScrollbar />,
       },
     ],
   },
